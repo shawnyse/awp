@@ -1,0 +1,14 @@
+ul.pagination {
+    font-size: 125%;
+    display: inline-block;
+    margin-bottom: 1em;
+}
+
+ul.pagination li {
+    display: inline;
+}
+
+ul.pagination li:hover {
+    text-decoration: underline;
+}
+
