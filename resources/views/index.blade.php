@@ -17,45 +17,47 @@
 </head>
 <body>
 
-    <div class="container">
+    <div class="container main-table">
+        <div class="box">
 
-        <h1 class="title">Guestbook Comments</h1>
+            <h1 class="title">Guestbook Comments</h1>
 
-        @if (count ($comments) > 0)
-            <table class="table is-striped is-hoverable">
-                <thead>
-                <tr>
-                    <th>User</th>
-                    <th>Comment</th>
-                    <th>Date</th>
-                    <th>Likes</th>
-                </tr>
-                </thead>
-                <tbody>
-
-                @foreach ($comments as $c)
-
+            @if (count ($comments) > 0)
+                <table class="table is-striped is-hoverable">
+                    <thead>
                     <tr>
-                        <td>{{ $c -> name }}</td>
-                        <td>{{ $c -> comment }}</td>
-                        <td>{{ $c -> created_at -> format ('D jS F') }}</td>
-                        <td>{{ $c -> likes }}</td>
+                        <th>User</th>
+                        <th>Comment</th>
+                        <th>Date</th>
+                        <th>Likes</th>
                     </tr>
+                    </thead>
+                    <tbody>
 
-                @endforeach
+                    @foreach ($comments as $c)
 
-                </tbody>
-            </table>
+                        <tr>
+                            <td>{{ $c -> name }}</td>
+                            <td>{{ $c -> comment }}</td>
+                            <td>{{ $c -> created_at -> format ('D jS F') }}</td>
+                            <td>{{ $c -> likes }}</td>
+                        </tr>
 
-            {{ $comments -> links () }}
+                    @endforeach
 
-        @else
-            <div class="notification is-info">
-                <p>
-                    The Guestbook is empty. Why not add a comment?
-                </p>
-            </div>
-        @endif
+                    </tbody>
+                </table>
+
+                {{ $comments -> links () }}
+
+            @else
+                <div class="notification is-info">
+                    <p>
+                        The Guestbook is empty. Why not add a comment?
+                    </p>
+                </div>
+            @endif
+        </div>
 
     </div>
 
