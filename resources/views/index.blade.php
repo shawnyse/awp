@@ -10,7 +10,9 @@
     <link rel="icon" type="image/png" href="{{ asset ('images/favicon.png') }}" />
 
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" />
+
+    <link rel="stylesheet" href="{{ asset ('css/guestbook.css') }}" />
 
 </head>
 <body>
