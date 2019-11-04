@@ -47,6 +47,8 @@
                 </tbody>
             </table>
 
+            {{ $comments -> links () }}
+
         @else
             <div class="notification is-info">
                 <p>
