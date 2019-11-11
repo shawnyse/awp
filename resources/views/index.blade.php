@@ -30,6 +30,7 @@
                         <th>Comment</th>
                         <th>Date</th>
                         <th>Likes</th>
+                        <th></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -41,6 +42,10 @@
                             <td>{{ $c -> comment }}</td>
                             <td>{{ $c -> created_at -> format ('D jS F') }}</td>
                             <td>{{ $c -> likes }}</td>
+                            <td><a class="button"
+                                   href="/comment/{{ $c -> id }}/like/"><ion-icon name="thumbs-up"></ion-icon>
+                                </a>
+                            </td>
                         </tr>
 
                     @endforeach
@@ -60,6 +65,8 @@
         </div>
 
     </div>
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
 </body>
 </html>
