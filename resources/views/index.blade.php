@@ -31,6 +31,7 @@
                         <th>Date</th>
                         <th>Likes</th>
                         <th></th>
+                        <th></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -44,6 +45,10 @@
                             <td>{{ $c -> likes }}</td>
                             <td><a class="button"
                                    href="/comment/{{ $c -> id }}/like/"><ion-icon name="thumbs-up"></ion-icon>
+                                </a>
+                            </td>
+                            <td><a class="button"
+                                   href="/comment/{{ $c -> id }}/dislike/"><ion-icon name="thumbs-down"></ion-icon>
                                 </a>
                             </td>
                         </tr>
