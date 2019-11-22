@@ -1,5 +1,9 @@
 /* General Layout */
 
+h1 {
+    margin-top: 4em;
+}
+
 .main-table {
     margin-top: 4em;
 }
