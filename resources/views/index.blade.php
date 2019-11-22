@@ -1,26 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Guestbook</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends ('layouts.app')
 
-    <link rel="icon" type="image/png" href="{{ asset ('images/favicon.png') }}" />
+@section ('page_title')
+    Guestbook
+@endsection
 
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" />
-
-    <link rel="stylesheet" href="{{ asset ('css/guestbook.css') }}" />
-
-</head>
-<body>
+@section ('content')
 
     <div class="container main-table">
         <div class="box">
 
-            <h1 class="title">Guestbook Comments</h1>
+            @section ('page_heading')
+                Guestbook Comments
+            @endsection
 
             @if (count ($comments) > 0)
                 <table class="table is-striped is-hoverable">
