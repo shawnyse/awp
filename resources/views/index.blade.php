@@ -32,6 +32,7 @@
                         <th>Likes</th>
                         <th></th>
                         <th></th>
+                        <th></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -43,6 +44,12 @@
                             <td>{{ $c -> comment }}</td>
                             <td>{{ $c -> created_at -> format ('D jS F') }}</td>
                             <td>{{ $c -> likes }}</td>
+                            <td>
+                                <a class="button"
+                                   href="/comment/{{ $c -> id }}/">
+                                    <ion-icon name="eye"></ion-icon>
+                                </a>
+                            </td>
                             <td><a class="button"
                                    href="/comment/{{ $c -> id }}/like/"><ion-icon name="thumbs-up"></ion-icon>
                                 </a>
