@@ -4,15 +4,14 @@
     Guestbook
 @endsection
 
+@section ('page_heading')
+    Guestbook Comments
+@endsection
 
 @section ('content')
 
     <div class="container main-table">
         <div class="box">
-
-            @section ('page_heading')
-                Guestbook Comments
-            @endsection
 
             @if (count ($comments) > 0)
                 <table class="table is-striped is-hoverable">
@@ -70,7 +69,5 @@
 
     </div>
 
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+@endsection
 
-</body>
-</html>
