@@ -32,11 +32,19 @@ class CommentController extends Controller {
     }
 
     public function edit (Comment $comment) {
-        //
+
+        return view ('comments.edit', compact ('comment'));
+
     }
 
     public function update (Request $request, Comment $comment) {
-        //
+
+        $comment -> update ([
+            'comment' => $request -> comment,
+        ]);
+
+        return redirect () -> action ('CommentController@index');
+
     }
 
     public function destroy (Comment $comment) {
