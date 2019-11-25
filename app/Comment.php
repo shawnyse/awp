@@ -16,7 +16,9 @@ class Comment extends Model {
 
         $this -> likes += 1;
 
+        $this -> timestamps = false;
         $this -> update ();
+        $this -> timestamps = true;
 
     }
 
@@ -24,7 +26,9 @@ class Comment extends Model {
 
         $this -> likes -= 1;
 
+        $this -> timestamps = false;
         $this -> update ();
+        $this -> timestamps = true;
 
     }
 }
