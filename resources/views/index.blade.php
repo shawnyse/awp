@@ -35,7 +35,7 @@
                         <tr>
                             <td>{{ $c -> name }}</td>
                             <td>{{ $c -> comment }}</td>
-                            <td>{{ $c -> created_at -> format ('D jS F') }}</td>
+                            <td>{{ $c -> updated_at -> format ('D jS F') }}</td>
                             <td>{{ $c -> likes }}</td>
                             <td>
                                 <a class="button"
