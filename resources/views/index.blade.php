@@ -24,6 +24,8 @@
                         <th></th>
                         <th></th>
                         <th></th>
+                        <th></th>
+                        <th></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -39,6 +41,18 @@
                                 <a class="button"
                                    href="/comment/{{ $c -> id }}/">
                                     <ion-icon name="eye"></ion-icon>
+                                </a>
+                            </td>
+                            <td>
+                                <a class="button"
+                                   href="/comment/{{ $c -> id }}/edit/">
+                                    <ion-icon name="create"></ion-icon>
+                                </a>
+                            </td>
+                            <td>
+                                <a class="button"
+                                   href="/comment/{{ $c -> id }}/delete/">
+                                    <ion-icon name="trash"></ion-icon>
                                 </a>
                             </td>
                             <td><a class="button"
