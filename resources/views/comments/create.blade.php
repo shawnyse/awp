@@ -12,7 +12,7 @@
 
 <div class="box">
 
-    <form action = "{{ route ('comment.store') }}" method="POST">
+    <form action = "/add/" method="POST">
 
         <fieldset>
 

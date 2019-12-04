@@ -82,7 +82,7 @@
         </div>
 
         <div class="box">
-            <a class="button is-primary" href="{{ route ('comment.create') }}">Add a Comment</a>
+            <a class="button is-primary" href="/add/">Add a Comment</a>
         </div>
 
     </div>
