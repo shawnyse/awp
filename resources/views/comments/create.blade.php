@@ -61,7 +61,7 @@
 </div>
 
 <p>
-    <a class="button" href="{{ URL::previous () }}">Back</a>
+    <a class="button" href="/">Back</a>
 </p>
 
 @endsection

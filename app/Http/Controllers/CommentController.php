@@ -9,6 +9,16 @@ class CommentController extends Controller {
 
     const COMMENTS_PER_PAGE = 5;
 
+    const RULES = [
+        'name' => 'required|min:3|max:64',
+        'comment' => 'required|min:2|max:256',
+    ];
+
+    const MESSAGES = [
+        'name.required' => 'The user\'s name is required.',
+        'comment.required' => 'The comment cannot be empty.',
+    ];
+
     public function index () {
 
         $comments = Comment::paginate (self::COMMENTS_PER_PAGE);
@@ -24,6 +34,8 @@ class CommentController extends Controller {
     }
 
     public function store (Request $request) {
+
+        $request -> validate (self::RULES, self::MESSAGES);
 
         Comment::create ([
 
@@ -50,6 +62,8 @@ class CommentController extends Controller {
     }
 
     public function update (Request $request, Comment $comment) {
+
+        $request -> validate (self::RULES, self::MESSAGES);
 
         $comment -> update ([
             'comment' => $request -> comment,
