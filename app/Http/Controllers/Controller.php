@@ -10,4 +10,9 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    public function index () {
+        $comments = Comment::all ();
+        return view ('index', compact ('comments'));
+    }
+
 }
